@@ -42,6 +42,18 @@
       margin: 30px 0;
       text-align: center;
     }
+    <button onclick="toggleVideo()">Включить/Выключить видео</button>
+
+<script>
+  function toggleVideo() {
+    const video = document.getElementById("bgVideo");
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  }
+</script>
   </style>
 </head>
 <body>
@@ -133,7 +145,7 @@
 
     <p><a href="#section1">🔙 Повернутися до початку</a></p>
 <!-- 🔥 Фонове відео -->
-<video autoplay muted loop class="background-video">
+<video id="bgVideo" autoplay muted loop class="background-video">
   <source src="Rick Roll (Different link + no ads).mp4" type="video/mp4">
 </video>
 
