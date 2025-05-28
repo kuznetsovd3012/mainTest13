@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Великий текст з форматуванням</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 12px 24px;
+      margin: 10px;
+      font-weight: bold;
+      border-radius: 8px;
+      color: white;
+      background-color: #4CAF50;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #388e3c;
+    }
+
+    .btn.secondary {
+      background-color: #007bff;
+    }
+
+    .btn.secondary:hover {
+      background-color: #0056b3;
+    }
+
+    .btn.github {
+      background-color: #6f42c1;
+    }
+
+    .btn.github:hover {
+      background-color: #512da8;
+    }
+
+    .button-group {
+      margin: 30px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Історія комп'ютерів</h1>
+    <nav>
+      <a href="#section1">Початок</a>
+      <a href="#section2">Сучасні комп'ютери</a>
+      <a href="#section3">Майбутнє</a>
+      <a href="another-page.html">Інший документ</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="button-group">
+      <a href="index.html" class="btn">На головну</a>
+      <a href="another-page.html" class="btn secondary">Інший документ</a>
+      <a href="https://github.com/kuznetsovd3012/mainTest7" class="btn github" target="_blank">GitHub</a>
+    </div>
+    <aside>
+      <h3>Додаткова навігація</h3>
+      <ul>
+        <li><a href="#section1">Початок</a></li>
+        <li><a href="#section2">Сучасні комп'ютери</a></li>
+        <li><a href="#section3">Майбутнє</a></li>
+      </ul>
+    </aside>
+    <section id="section1">
+      <article>
+        <h2>Початок комп'ютерної епохи</h2>
+        <p>Перші комп’ютери з’явилися в середині XX століття. Вони були дуже великими та повільними, проте стали проривом у сфері обчислень. Наприклад, ENIAC був величезним і займав цілу кімнату, але міг виконувати тисячі операцій на секунду.</p>
+        <figure>
+         <img src="images/eniac.png" alt="ENIAC - перший комп'ютер">
+         <figcaption>ENIAC — один із перших електронних комп’ютерів у світі</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section id="section2">
+      <article>
+        <h2>Сучасні комп’ютери</h2>
+        <p>Сьогодні комп’ютери є всюди: в офісах, вдома, у кишені. Вони потужні, компактні та багатофункціональні. Завдяки їм ми можемо працювати, грати, навчатися, створювати мистецтво та навіть спілкуватися через відеозв’язок з іншого кінця світу.</p>
+        <figure>
+         <img src="images/notebook.png" alt="Комп’ютер майбутнього">
+         <figcaption>Фантастичне уявлення про комп’ютери майбутнього</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section id="section3">
+      <article>
+        <h2>Майбутнє обчислювальної техніки</h2>
+        <p>У майбутньому комп’ютери стануть ще розумнішими, швидшими і меншими. Ми вже бачимо розвиток квантових комп’ютерів, штучного інтелекту та нейромереж. Комп’ютери, можливо, стануть невидимими — вбудованими в наш одяг, окуляри або навіть тіло.</p>
+        <figure>
+         <img src="images/mediacom-post-108.png" alt="Сучасний ноутбук">
+         <figcaption>Сучасні компактні комп’ютери</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section class="block-example">
+      <h2>Приклад 1: Два рівні</h2>
+      <div class="outer-block">
+        Зовнішній блок
+        <div class="inner-block">Внутрішній блок</div>
+      </div>
+    </section>
+
+    <section class="block-example">
+      <h2>Приклад 2: Три рівні</h2>
+      <div class="outer-block">
+        Зовнішній блок
+        <div class="inner-block">
+          Внутрішній блок
+          <div class="deep-inner-block">Глибокий внутрішній блок</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block-example">
+      <h2>Приклад 3: Сусідні блоки</h2>
+      <div class="outer-block">
+        Зовнішній блок
+        <div class="inner-block">Внутрішній блок 1</div>
+        <div class="inner-block">Внутрішній блок 2</div>
+      </div>
+    </section>
+
+    <p><a href="#section1">🔙 Повернутися до початку</a></p>
+<!-- 🔥 Фонове відео -->
+<video autoplay muted loop class="background-video">
+  <source src="Rick Roll (Different link + no ads).mp4" type="video/mp4">
+</video>
+
+<div class="content">
+  <h2>Мультимедійні приклади</h2>
+
+  <!-- 🎥 Відео через <video> -->
+  <h3>Локальне відео</h3>
+  <video controls width="600">
+    <source src="Rick Roll (Different link + no ads).mp4" type="video/mp4">
+  </video>
+
+  <!-- 📺 YouTube через <iframe> -->
+  <h3>Відео з YouTube</h3>
+  <iframe width="600" height="340" src="https://www.youtube.com//embed/UsqVpgcK6bQ"
+        title="YouTube video" frameborder="0" allowfullscreen></iframe>
+
+  <!-- 🎵 Аудіо -->
+  <h3>Аудіо</h3>
+  <audio controls>
+    <source src="Walk_Street.mp3" type="audio/mpeg">
+    Ваш браузер не підтримує аудіо.
+  </audio>
+
+  <!-- 🖌️ Canvas -->
+  <h3>Canvas (JavaScript)</h3>
+  <canvas id="myCanvas" width="400" height="200"></canvas>
+
+  <script>
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = 'lightblue';
+    ctx.fillRect(10, 10, 380, 180);
+    ctx.fillStyle = 'black';
+    ctx.font = '20px sans-serif';
+    ctx.fillText('Canvas-приклад', 120, 100);
+  </script>
+
+  <!-- 📐 SVG -->
+  <h3>SVG графіка</h3>
+  <svg width="400" height="200">
+    <circle cx="100" cy="100" r="80" fill="orange" />
+    <text x="60" y="105" font-size="20" fill="black">SVG коло</text>
+  </svg>
+</div>
+  </main>
+   <div class="content">
+   <section id="formats-demo">
+  <h2>Додаткове форматування тексту</h2>
+
+  <p><q>Комп’ютери не вирішують всі проблеми — вони лише виконують інструкції.</q></p>
+
+  <blockquote cite="https://uk.wikipedia.org/wiki/Алан_Тюрінг">
+    «Машина може імітувати будь-який процес мислення, якщо його можна описати алгоритмічно.»
+  </blockquote>
+
+  <p>Скорочення: <abbr title="Central Processing Unit">CPU</abbr> — центральний процесор.</p>
+
+  <address>
+    Автор проєкту: <a href="mailto:student@example.com">student@example.com</a><br>
+    вул. Технологічна, 42, м. Київ, Україна
+  </address>
+
+  <p>Книга <cite>«Філософія штучного інтелекту»</cite> описує етичні аспекти розвитку комп'ютерних систем.</p>
+
+  <p>Реверс тексту за допомогою <code>&lt;bdo&gt;</code>: <bdo dir="rtl">Цей текст написаний справа наліво</bdo></p>
+</section>
+
+  <footer>
+    &copy; 2025 Проєкт з HTML. Усі права захищено.
+  </footer>
+
+</body>
+</html>

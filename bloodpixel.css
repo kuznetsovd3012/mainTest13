@@ -1,0 +1,125 @@
+/* 🌑 Базовий стиль */
+body {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  padding: 40px;
+  margin: 0;
+}
+
+/* 🔠 Заголовки */
+h1 {
+  font-size: 3em;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+h2, h3 {
+  color: #4fa3ff;
+  margin-top: 40px;
+}
+
+/* 📝 Текст */
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin: 0 auto 20px;
+  max-width: 800px;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: #4fa3ff;
+  margin-bottom: 40px;
+}
+
+/* 🔘 Кнопка */
+.btn.download {
+  background-color: #2979ff;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+  transition: transform 0.2s, background-color 0.3s;
+  margin-top: 30px;
+  box-shadow: 0 0 10px #2979ff80;
+}
+
+.btn.download:hover {
+  background-color: #1c5edb;
+  transform: scale(1.05);
+}
+
+/* 📸 Зображення */
+img {
+  max-width: 400px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 0 15px #000;
+}
+
+/* 🔊 Аудіо */
+audio {
+  margin-top: 20px;
+  width: 300px;
+}
+
+/* 📦 Секції */
+section {
+  margin-bottom: 60px;
+}
+
+/* 📜 Списки */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: left;
+}
+
+ul li::before {
+  content: '🔹';
+  margin-right: 8px;
+  color: #4fa3ff;
+}
+
+/* 🎬 Відео, Canvas, SVG */
+video,
+iframe,
+audio,
+canvas,
+svg {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* 🖼️ Canvas */
+canvas {
+  border: 2px solid #4fa3ff;
+  background-color: #111;
+}
+
+/* 🧑‍🎤 SVG */
+svg text {
+  font-family: 'Orbitron', sans-serif;
+  fill: #fff;
+}
+
+/* 📍 Центрування кнопок */
+.button-center {
+  margin-top: 40px;
+}
+
+/* 📢 Footer */
+footer {
+  margin-top: 80px;
+  font-size: 0.9em;
+  color: #888;
+}

@@ -1,0 +1,169 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  margin: 40px;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #0056b3;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  text-align: center;
+  margin: 20px auto;
+}
+
+figcaption {
+  font-style: italic;
+  color: #555;
+  margin-top: 8px;
+}
+
+nav {
+  background-color: #e0e7ff;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+nav a {
+  margin-right: 20px;
+  color: #1a237e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 10px;
+  text-align: center;
+}
+.btn.main {
+  background-color: #4CAF50;
+}
+.btn.main:hover {
+  background-color: #45a049;
+}
+.btn.secondary {
+  background-color: #007bff;
+}
+.btn.secondary:hover {
+  background-color: #0056b3;
+}
+.btn.github {
+  background-color: #6f42c1;
+}
+.btn.github:hover {
+  background-color: #512da8;
+}
+.btn.other {
+  background: linear-gradient(to right, #667eea, #764ba2);
+}
+.btn.other:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  color: #888;
+}
+
+.block-example {
+  margin: 40px 0;
+}
+
+.outer-block, .inner-block, .deep-inner-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+  border: 3px solid #333;
+}
+
+.outer-block {
+  background-color: #e0f7fa;
+  flex-direction: column;
+}
+
+.inner-block {
+  background-color: #b2ebf2;
+  width: 80%;
+}
+
+.deep-inner-block {
+  background-color: #80deea;
+  width: 60%;
+}
+/* 📹 Фонове відео */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+/* 📦 Контент поверх фону */
+.content {
+  position: relative;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* 🎬 Загальні мультимедійні блоки */
+video,
+iframe,
+audio,
+canvas,
+svg {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* 🖼️ Карта-зображення */
+map area {
+  cursor: pointer;
+}
+
+/* 🖌️ Canvas frame */
+canvas {
+  border: 2px solid #333;
+  background-color: #fdfdfd;
+}
+
+/* 🖼️ SVG базовий стиль */
+svg text {
+  font-family: 'Segoe UI', sans-serif;
+}
