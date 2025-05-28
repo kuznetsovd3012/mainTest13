@@ -151,42 +151,30 @@
   <source src="Rick Roll (Different link + no ads).mp4" type="video/mp4">
 </video>
 <script>
-  let videoOn = true;
+  function toggleVideo() {
+    const video = document.getElementById('bgVideo');
+    const body = document.body;
 
-  function applyBackground(type) {
-  const video = document.querySelector('.background-video');
-  const body = document.body;
+    if (!video) return;
 
-  // Сховати відео та скинути фон
-  if (video) {
-    video.pause(); // 🛑 зупинити
-    video.style.display = 'none';
-  }
+    const isHidden = video.classList.contains('hidden');
 
-  body.style.backgroundImage = '';
-  body.style.backgroundColor = '';
-
-  if (type === 'video') {
-    if (video) {
-      video.currentTime = 0; // ⏮️ перемотати на початок
-      video.style.display = 'block';
-      const playPromise = video.play(); // ▶️ вручну запуск
+    if (isHidden) {
+      // ▶️ Увімкнути відео
+      video.classList.remove('hidden');
+      video.currentTime = 0;
+      const playPromise = video.play();
       if (playPromise !== undefined) {
-        playPromise.catch(error => {
-          console.warn("Автовідтворення заборонене браузером:", error);
-        });
+        playPromise.catch(err => console.warn("Автовідтворення заблоковане:", err));
       }
-    }
-    } else if (type === 'color') {
-      body.style.backgroundColor = '#f4f6f8';
-    } else if (type === 'image') {
-      body.style.backgroundImage = "url('images/eniac.png')";
-      body.style.backgroundSize = 'cover';
-      body.style.backgroundPosition = 'center';
+      body.style.backgroundColor = 'transparent'; // прибираємо білий фон
+    } else {
+      // ⏹️ Вимкнути відео
+      video.pause();
+      video.classList.add('hidden');
+      body.style.backgroundColor = 'white'; // білий фон як резерв
     }
   }
-
-  videoOn = !videoOn;
 </script>
 <div class="content">
   <h2>Мультимедійні приклади</h2>
