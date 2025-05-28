@@ -17,7 +17,8 @@
       background-color: #4CAF50;
       transition: background-color 0.3s ease;
     }
-    .background-video {
+    .background-video
+    {
       position: fixed;
       top: 0;
       left: 0;
@@ -152,24 +153,23 @@
 <script>
   let videoOn = true;
 
-function toggleVideo() {
-      const video = document.getElementById("bgVideo");
-      const button = document.getElementById("toggleButton");
+  function toggleVideo() {
+    const video = document.getElementById("bgVideo");
+    const button = document.getElementById("toggleButton");
 
-      if (videoOn) {
-        video.pause();
-        video.classList.add("hidden");
-        document.body.style.backgroundColor = "white";
-        button.textContent = "Увімкнути відео";
-      } else {
-        video.classList.remove("hidden");
-        video.play();
-        document.body.style.backgroundColor = "black"; // можно изменить на любой
-        button.textContent = "Вимкнути відео";
-      }
+    if (videoOn) {
+      video.pause();
+      video.classList.add("hidden");
+      document.body.style.backgroundColor = "white";
+      button.textContent = "Увімкнути відео";
+    } else {
+      video.classList.remove("hidden");
+      video.play();
+      document.body.style.backgroundColor = "black"; // или любой другой фон
+      button.textContent = "Вимкнути відео";
+    }
 
-      videoOn = !videoOn;
-   }
+    videoOn = !videoOn;
   }
 </script>
 <div class="content">
