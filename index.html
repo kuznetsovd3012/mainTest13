@@ -152,29 +152,33 @@
 </video>
 <script>
   function toggleVideo() {
-    const video = document.getElementById('bgVideo');
-    const body = document.body;
+  const video = document.getElementById('bgVideo');
+  const body = document.body;
 
-    if (!video) return;
+  const isHidden = video.classList.contains('hidden');
 
-    const isHidden = video.classList.contains('hidden');
-
-    if (isHidden) {
-      // ▶️ Увімкнути відео
-      video.classList.remove('hidden');
-      video.currentTime = 0;
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(err => console.warn("Автовідтворення заблоковане:", err));
-      }
-      body.style.backgroundColor = 'transparent'; // прибираємо білий фон
-    } else {
-      // ⏹️ Вимкнути відео
-      video.pause();
-      video.classList.add('hidden');
-      body.style.backgroundColor = 'white'; // білий фон як резерв
-    }
+  if (isHidden) {
+    video.classList.remove('hidden');
+    video.currentTime = 0;
+    video.play().catch(() => {});
+    body.style.backgroundColor = 'transparent';
+    localStorage.setItem("bgVideoOn", "true");
+  } else {
+    video.pause();
+    video.classList.add('hidden');
+    body.style.backgroundColor = 'white';
+    localStorage.setItem("bgVideoOn", "false");
   }
+ }
+
+ // При завантаженні
+ window.addEventListener("DOMContentLoaded", () => {
+  const saved = localStorage.getItem("bgVideoOn");
+   if (saved === "false") {
+     document.getElementById('bgVideo').classList.add('hidden');
+     document.body.style.backgroundColor = 'white';
+   }
+ });
 </script>
 <div class="content">
   <h2>Мультимедійні приклади</h2>
