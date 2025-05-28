@@ -42,18 +42,6 @@
       margin: 30px 0;
       text-align: center;
     }
-    <button onclick="toggleVideo()">Включить/Выключить видео</button>
-
-<script>
-  function toggleVideo() {
-    const video = document.getElementById("bgVideo");
-    if (video.paused) {
-      video.play();
-    } else {
-      video.pause();
-    }
-  }
-</script>
   </style>
 </head>
 <body>
@@ -65,6 +53,7 @@
       <a href="#section2">Сучасні комп'ютери</a>
       <a href="#section3">Майбутнє</a>
       <a href="another-page.html">Інший документ</a>
+      <button onclick="toggleVideo()">Включить/Выключить видео</button>
     </nav>
   </header>
 
@@ -148,7 +137,16 @@
 <video id="bgVideo" autoplay muted loop class="background-video">
   <source src="Rick Roll (Different link + no ads).mp4" type="video/mp4">
 </video>
-
+<script>
+  function toggleVideo() {
+    const video = document.getElementById("bgVideo");
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  }
+</script>
 <div class="content">
   <h2>Мультимедійні приклади</h2>
 
