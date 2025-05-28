@@ -153,21 +153,38 @@
 <script>
   let videoOn = true;
 
-  function toggleVideo() {
-    const video = document.getElementById("bgVideo");
-    const button = document.getElementById("toggleButton");
+  function applyBackground(type) {
+  const video = document.querySelector('.background-video');
+  const body = document.body;
 
-    if (videoOn) {
-      video.pause();
-      video.classList.add("hidden");
-      document.body.style.backgroundColor = "white";
-      button.textContent = "Увімкнути відео";
-    } else {
-      video.classList.remove("hidden");
-      video.play();
-      document.body.style.backgroundColor = "black"; // или любой другой фон
-      button.textContent = "Вимкнути відео";
+  // Сховати відео та скинути фон
+  if (video) {
+    video.pause(); // 🛑 зупинити
+    video.style.display = 'none';
+  }
+
+  body.style.backgroundImage = '';
+  body.style.backgroundColor = '';
+
+  if (type === 'video') {
+    if (video) {
+      video.currentTime = 0; // ⏮️ перемотати на початок
+      video.style.display = 'block';
+      const playPromise = video.play(); // ▶️ вручну запуск
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.warn("Автовідтворення заборонене браузером:", error);
+        });
+      }
     }
+  } else if (type === 'color') {
+    body.style.backgroundColor = '#f4f6f8';
+  } else if (type === 'image') {
+    body.style.backgroundImage = "url('images/eniac.png')";
+    body.style.backgroundSize = 'cover';
+    body.style.backgroundPosition = 'center';
+  }
+}
 
     videoOn = !videoOn;
   }
